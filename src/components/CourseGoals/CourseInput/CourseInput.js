@@ -20,7 +20,11 @@ const CourseInput = (props) => {
       setIsValid(false);
       return;
     }
-    props.onAddGoal(enteredValue);
+    const valueAndId = {
+      goalValue: enteredValue,
+      goalId: Math.random()
+    }
+    props.onAddGoal(valueAndId);
   };
 
   return (
